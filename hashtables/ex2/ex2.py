@@ -13,21 +13,9 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # Your code here
-    for object in range(length):
-        if tickets[object].source == "NONE":
-            trip_array[0] = tickets[object].destination
-        #print("tickets[object]: ",tickets[object].source)
-        #print(trip_array)
-        #print("source: ", object.source, "destination: ", object.destination)
-        hash_table[tickets[object].source] = tickets[object].destination 
-    #return route
-    for i in range(length):
-        print("i: ",i)
-        if trip_array[i] in hash_table:
-            print('---->',trip_array[i])
-            trip_array[i] =  hash_table[trip_array[i]]
-    return trip_array
+    
+    
+    return None
 
 
 tickets = [
