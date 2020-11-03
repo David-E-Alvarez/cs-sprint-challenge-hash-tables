@@ -13,9 +13,10 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    
-    
-    return None
+    for ticket in tickets:#iterate over tickets
+        if ticket not in hash_table:#check to see if ticket is in hash table
+            hash_table[ticket.source] = ticket.destination #put ticket into hashtable
+    return None #should return array of trip route e.g. sources and destination
 
 
 tickets = [
@@ -30,6 +31,8 @@ tickets = [
     Ticket("SLC","PIT"),#4
     Ticket("BHM","FLG")#2
 ]
+
+
 #     T(1)----------T(2)--------->T(3)---------->T(4)------>T(5)
 #["LAX", "SFO", "BHM", "FLG", "XNA", "CID", "SLC", "PIT", "ORD"] #trip for tickets above
 reconstruct_trip(tickets, len(tickets))
